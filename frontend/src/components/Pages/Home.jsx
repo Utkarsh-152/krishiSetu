@@ -222,37 +222,42 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 z-0">
+        <section className="relative overflow-hidden min-h-screen bg-white">
+          <div className="absolute right-0 top-0 w-1/2 h-full">
             <img
-              src="/wheat-bg.jpg"
-              alt="Wheat field background"
-              className="w-full h-full object-cover"
+              src="wheat.png"
+              alt="Wheat field"
+              className="w-full h-full object-cover object-left"
             />
           </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
               <motion.div
-                className="max-w-xl space-y-6"
+                className="max-w-2xl space-y-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-extrabold text-black leading-tight">
-                  Revolutionizing <br />
-                  <span className="text-emerald-800">Indian</span> <span className="inline-flex items-center">Agriculture <img src="/leaf-icon.png" alt="Leaf icon" className="w-8 h-8 ml-2" /></span>
+                <h1 className="text-[64px] font-bold leading-tight">
+                  Revolutionizing
+                  <div className="relative">
+                    <span className="text-[#2B5219]">Indian</span>
+                    <img src="tag.png" alt="Leaf" className="absolute right-90 -top-5 w-32 h-32" />
+                    <div className="absolute -z-10 w-[30%] h-4 bg-[#FFE7BA] bottom-2"></div>
+                  </div>
+                  Agriculture
                 </h1>
-                <p className="text-lg md:text-xl text-gray-600 max-w-2xl">
+                <p className="text-xl text-gray-600 max-w-xl">
                   Empowering farmers with technology for sustainable farming, higher yields, and better livelihoods.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-black shadow-lg hover:bg-gray-800 text-white px-8 py-6 text-lg rounded-full">
+                <div className="flex gap-4 pt-4">
+                  <Button className="bg-black hover:bg-gray-900 text-white px-8 py-3 text-lg rounded-full flex items-center gap-2">
                     Explore
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="w-5 h-5" />
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-lg rounded-full"
+                    className="border-2 border-gray-200 text-gray-800 hover:bg-gray-50 px-8 py-3 text-lg rounded-full"
                   >
                     Watch Demo
                   </Button>
@@ -264,151 +269,125 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="p-6 grid grid-cols-2 gap-4">
-                  <div className="rounded-2xl shadow-lg bg-gray-50 p-4 flex flex-col items-center justify-center text-center">
-                    <img src="/app-icon.png" alt="Mobile app" className="w-12 h-12 mb-2" />
-                    <p className="text-sm text-gray-600">Take Krishi Setu Everywhere</p>
+                <div className="grid gap-4 max-w-md ml-auto">
+                  <div className="bg-gray-100 rounded-2xl p-6 flex items-center gap-4">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-lg mb-1">Take Krishi Setu Everywhere</h3>
+                      <p className="text-gray-600 text-sm">Download our mobile app to access all KrishiSetu features on the go.</p>
+                    </div>
+                    <img src="plant.png" alt="Plant" className="w-16 h-16 object-contain" />
                   </div>
-                  <div className="rounded-2xl shadow-lg bg-gray-50 p-4 flex flex-col items-center justify-center text-center">
-                    <img src="\WhatsApp Image 2025-04-23 at 18.03.48_21eda6e5.jpg" alt="Soil testing" className="w-12 h-12 mb-2" />
-                    <p className="text-sm text-gray-600">Crop Selection</p>
+                  <div className="bg-gray-100 rounded-2xl p-6 flex items-center gap-4">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-lg mb-1">Soil Testing</h3>
+                      <p className="text-gray-600 text-sm">Do soil tests with few simple steps</p>
+                    </div>
+                    <img src="WhatsApp Image 2025-04-23 at 18.03.48_21eda6e5.jpg" alt="Soil" className="w-16 h-16 object-contain" />
+                  </div>
+                  <div className="bg-gray-100 rounded-2xl p-6 flex items-center gap-4">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-lg mb-1">Climate Tips</h3>
+                      <p className="text-gray-600 text-sm">Get weather insights</p>
+                    </div>
+                    <img src="/sun.svg" alt="Sun" className="w-16 h-16 object-contain" />
                   </div>
                 </div>
-                <div className="p-6 grid grid-cols-2 gap-4">
-                  <div className="rounded-2xl shadow-lg bg-gray-50 p-4 flex flex-col items-center justify-center text-center">
-                    <img src="\WhatsApp Image 2025-04-23 at 18.03.49_85dc70c2.jpg" alt="Weather" className="w-12 h-12 mb-2" />
-                    <p className="text-sm text-gray-600">Climate Tips</p>
-                  </div>
-                  <div className="shadow-lg bg-gray-50 p-4 rounded-2xl flex flex-col items-center justify-center text-center">
-                    <img src="/" alt="Marketplace" className="w-12 h-12 mb-2" />
-                    <p className="text-sm text-gray-600">Online Mandi</p>
-                  </div>
-                </div>
-                
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Problem & Solutions Cards */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-4">
-                Agricultural Challenges & Our Solutions
-              </h2>
-              <p className="text-lg text-green-700 max-w-2xl mx-auto">
-                KrishiSetu addresses key farming challenges with innovative technology solutions
-              </p>
-            </motion.div>
+        {/* Agricultural Challenges Section */}
+        <section className="relative bg-[#2B3500] py-20 overflow-hidden">
+          {/* Decorative Leaves */}
+          <div className="absolute left-0 bottom-0">
+            <img src="Mask group.png" alt="" className="w-[800px] h-auto opacity-80" />
+          </div>
 
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-              variants={container}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
-              <motion.div variants={item}>
-                <Card className="h-full border-green-100 hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader className="pb-2 px-6 pt-6">
-                    <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-4">
-                      <Droplets className="h-6 w-6 text-amber-600" />
-                    </div>
-                    <CardTitle className="text-green-800">Soil Degradation</CardTitle>
-                  </CardHeader>
-                  <CardContent className="px-6 py-4">
-                    <p className="text-green-700">
-                      Depleted soil nutrients lead to poor crop health and reduced yields.
-                    </p>
-                  </CardContent>
-                  <CardFooter className="px-6 pb-6 pt-2">
-                    <div className="w-full p-3 bg-green-50 rounded-lg">
-                      <p className="text-green-800 font-medium flex items-center">
-                        <Leaf className="h-4 w-4 mr-2 text-green-600" />
-                        Soil testing & treatment recommendations
-                      </p>
-                    </div>
-                  </CardFooter>
-                </Card>
-              </motion.div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid md:grid-cols-12 gap-8">
+              {/* Image Card */}
+              <div className="md:col-span-5">
+                <div className="bg-white p-4 rounded-[32px] shadow-lg">
+                  <img
+                    src="image 1.png"
+                    alt="Corn field at sunset"
+                    className="w-full h-[300px] object-cover rounded-[24px]"
+                  />
+                </div>
+              </div>
 
-              <motion.div variants={item}>
-                <Card className="h-full border-green-100 hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader className="pb-2 px-6 pt-6">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
-                      <CloudSun className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <CardTitle className="text-green-800">Climate Impact</CardTitle>
-                  </CardHeader>
-                  <CardContent className="px-6 py-4">
-                    <p className="text-green-700">
-                      Unpredictable weather patterns damage crops and disrupt farming cycles.
-                    </p>
-                  </CardContent>
-                  <CardFooter className="px-6 pb-6 pt-2">
-                    <div className="w-full p-3 bg-green-50 rounded-lg">
-                      <p className="text-green-800 font-medium flex items-center">
-                        <Sun className="h-4 w-4 mr-2 text-green-600" />
-                        Smart weather-based sowing & harvesting
-                      </p>
-                    </div>
-                  </CardFooter>
-                </Card>
-              </motion.div>
+              {/* Content */}
+              <div className="md:col-span-7">
+                <div className="text-center mb-16">
+                  <h2 className="text-white text-5xl font-semibold mb-4 flex items-center justify-center gap-2">
+                    Agricultural Challenges
+                    <br />
+                    And Our Solution
+                    <img src="tag.png" alt="" className="w-12 h-12" />
+                  </h2>
+                  <p className="text-white/90 text-xl">
+                    KrishiSetu addresses key farming challenges with innovative technology solutions
+                  </p>
+                </div>
 
-              <motion.div variants={item}>
-                <Card className="h-full border-green-100 hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader className="pb-2 px-6 pt-6">
-                    <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mb-4">
-                      <Flame className="h-6 w-6 text-red-600" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {/* Stubble Burning Card */}
+                  <div className="bg-white p-6 rounded-[24px] shadow-lg relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+                      <div className="bg-white rounded-2xl p-3 shadow-lg">
+                        <img src="/stubble-icon.svg" alt="Stubble burning icon" className="w-12 h-12" />
+                      </div>
                     </div>
-                    <CardTitle className="text-green-800">Stubble Burning</CardTitle>
-                  </CardHeader>
-                  <CardContent className="px-6 py-4">
-                    <p className="text-green-700">Crop residue burning causes air pollution and soil damage.</p>
-                  </CardContent>
-                  <CardFooter className="px-6 pb-6 pt-2">
-                    <div className="w-full p-3 bg-green-50 rounded-lg">
-                      <p className="text-green-800 font-medium flex items-center">
-                        <Globe className="h-4 w-4 mr-2 text-green-600" />
-                        Marketplace to sell stubble to power plants
+                    <div className="text-center pt-8">
+                      <h3 className="font-bold text-lg mb-2">STUBBLE BURNING</h3>
+                      <p className="text-sm text-gray-600 mb-3">
+                        BURNING CAUSES AIR POLLUTION AND SOIL DAMAGE.
                       </p>
+                      <div className="bg-[#E8F5E9] text-[#2B5219] text-sm py-2 px-4 rounded-full inline-flex items-center gap-2">
+                        Marketplace to sell stubble to power plants 🌱
+                      </div>
                     </div>
-                  </CardFooter>
-                </Card>
-              </motion.div>
+                  </div>
 
-              <motion.div variants={item}>
-                <Card className="h-full border-green-100 hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader className="pb-2 px-6 pt-6">
-                    <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                      <Plant className="h-6 w-6 text-purple-600" />
+                  {/* Climate Impact Card */}
+                  <div className="bg-white p-6 rounded-[24px] shadow-lg relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+                      <div className="bg-white rounded-2xl p-3 shadow-lg">
+                        <img src="/climate-icon.svg" alt="Climate impact icon" className="w-12 h-12" />
+                      </div>
                     </div>
-                    <CardTitle className="text-green-800">Wrong Crop Selection</CardTitle>
-                  </CardHeader>
-                  <CardContent className="px-6 py-4">
-                    <p className="text-green-700">
-                      Inappropriate crop choices for soil and climate conditions waste resources.
-                    </p>
-                  </CardContent>
-                  <CardFooter className="px-6 pb-6 pt-2">
-                    <div className="w-full p-3 bg-green-50 rounded-lg">
-                      <p className="text-green-800 font-medium flex items-center">
-                        <Seedling className="h-4 w-4 mr-2 text-green-600" />
-                        AI-powered crop advisor
+                    <div className="text-center pt-8">
+                      <h3 className="font-bold text-lg mb-2">CLIMATE IMPACT</h3>
+                      <p className="text-sm text-gray-600 mb-3">
+                        PATTERNS DAMAGE CROPS AND DISRUPT FARMING CYCLES.
                       </p>
+                      <div className="bg-[#E8F5E9] text-[#2B5219] text-sm py-2 px-4 rounded-full inline-flex items-center gap-2">
+                        Smart weather-based sowing & harvesting 🌱
+                      </div>
                     </div>
-                  </CardFooter>
-                </Card>
-              </motion.div>
-            </motion.div>
+                  </div>
+
+                  {/* Wrong Crop Card */}
+                  <div className="bg-white p-6 rounded-[24px] shadow-lg relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+                      <div className="bg-white rounded-2xl p-3 shadow-lg">
+                        <img src="crop-icon.svg" alt="Wrong crop icon" className="w-12 h-12" />
+                      </div>
+                    </div>
+                    <div className="text-center pt-8">
+                      <h3 className="font-bold text-lg mb-2">WRONG CROP</h3>
+                      <p className="text-sm text-gray-600 mb-3">
+                        INAPPROPRIATE CROP CHOICES WASTE SOIL AND RESOURCES.
+                      </p>
+                      <div className="bg-[#E8F5E9] text-[#2B5219] text-sm py-2 px-4 rounded-full inline-flex items-center gap-2">
+                        AI powered Crop Advisor 🌱
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
