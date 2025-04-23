@@ -225,9 +225,9 @@ export default function Home() {
         <section className="relative overflow-hidden py-20 lg:py-32">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1644079801376-e442c29d5bf2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8U3VucmlzZSUyMG92ZXIlMjBmaWVsZHN8ZW58MHx8MHx8fDI%3D"
+              src="https://images.unsplash.com/photo-1745305402882-c48c759861a5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Sunrise over fields"
-              className="w-full h-full object-cover opacity-30"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -237,10 +237,10 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-green-900 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Revolutionizing Indian Agriculture
               </h1>
-              <p className="text-lg md:text-xl text-green-800 max-w-2xl">
+              <p className="text-lg md:text-xl text-white max-w-2xl">
                 Empowering farmers with technology for sustainable farming, higher yields, and better livelihoods.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">

@@ -592,28 +592,28 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <div className="text-sm text-green-700 mb-1">Income</div>
-                    <div className="text-2xl font-bold text-green-900">
+                  <div className="bg-green-800 p-4 rounded-lg">
+                    <div className="text-sm text-white mb-1">Income</div>
+                    <div className="text-2xl font-bold text-white">
                       ₹{financialData.currentMonth.income.toLocaleString()}
                     </div>
                   </div>
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <div className="text-sm text-red-700 mb-1">Expenses</div>
-                    <div className="text-2xl font-bold text-red-900">
+                  <div className="bg-red-800 p-4 rounded-lg">
+                    <div className="text-sm text-white mb-1">Expenses</div>
+                    <div className="text-2xl font-bold text-white">
                       ₹{financialData.currentMonth.expenses.toLocaleString()}
                     </div>
                   </div>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <div className="text-sm text-blue-700 mb-1">Profit</div>
-                    <div className="text-2xl font-bold text-blue-900">
+                  <div className="bg-blue-800 p-4 rounded-lg">
+                    <div className="text-sm text-white mb-1">Profit</div>
+                    <div className="text-2xl font-bold text-white">
                       ₹{financialData.currentMonth.profit.toLocaleString()}
                     </div>
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <div className="text-sm font-medium text-green-800 mb-2">Monthly Trend</div>
+                  <div className="text-sm font-medium text-black mb-2">Monthly Trend</div>
                   <div className="h-64">
                     <ChartContainer className="h-full" data={financialData.monthlyData}>
                       <Chart>
