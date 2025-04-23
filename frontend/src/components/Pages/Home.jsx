@@ -155,35 +155,35 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Seedling className="h-6 w-6 text-green-600" />
-            <span className="text-xl font-bold text-green-800">KrishiSetu</span>
+            <Seedling className="h-6 w-6 text-emerald-600" />
+            <span className="text-xl font-bold text-emerald-800">KrishiSetu</span>
           </div>
 
           <nav className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-sm font-medium text-green-900 hover:text-green-700">
+            <Link to="/" className="text-sm font-medium text-emerald-900 hover:text-emerald-700">
               Home
             </Link>
-            <Link to="/dashboard" className="text-sm font-medium text-green-900 hover:text-green-700">
+            <Link to="/dashboard" className="text-sm font-medium text-emerald-900 hover:text-emerald-700">
               Dashboard
             </Link>
-            <Link to="/online-mandi" className="text-sm font-medium text-green-900 hover:text-green-700">
+            <Link to="/online-mandi" className="text-sm font-medium text-emerald-900 hover:text-emerald-700">
               Online Mandi
             </Link>
-            <Link to="/crop-recommedations" className="text-sm font-medium text-green-900 hover:text-green-700">
+            <Link to="/crop-recommedations" className="text-sm font-medium text-emerald-900 hover:text-emerald-700">
               Crop Recommendation
             </Link>
-            <Link to="/about-us" className="text-sm font-medium text-green-900 hover:text-green-700">
+            <Link to="/about-us" className="text-sm font-medium text-emerald-900 hover:text-emerald-700">
               About Us
             </Link>
           </nav>
 
           <div className="flex items-center gap-4">
-            <Button variant="outline" className="hidden md:flex border-green-600 text-green-700 hover:bg-green-50">
+            <Button variant="outline" className="hidden md:flex border-emerald-600 text-emerald-700 hover:bg-emerald-50">
               <Link to="/login">
                 Login
               </Link>
             </Button>
-            <Button className="hidden md:flex bg-green-700 hover:bg-green-800"> <Link to="/register">Sign Up</Link></Button>
+            <Button className="hidden md:flex bg-emerald-700 hover:bg-emerald-800"> <Link to="/register">Sign Up</Link></Button>
             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -194,19 +194,19 @@ export default function Home() {
         {isMenuOpen && (
           <div className="md:hidden border-t p-4 bg-white">
             <nav className="flex flex-col space-y-4 px-4">
-              <Link href="#" className="text-sm font-medium text-green-900 hover:text-green-700">
+              <Link href="/" className="text-sm font-medium text-green-900 hover:text-green-700">
                 Home
               </Link>
-              <Link href="#" className="text-sm font-medium text-green-900 hover:text-green-700">
+              <Link href="/dashboard" className="text-sm font-medium text-green-900 hover:text-green-700">
                 Solutions
               </Link>
               <Link href="#" className="text-sm font-medium text-green-900 hover:text-green-700">
                 Services
               </Link>
-              <Link href="#" className="text-sm font-medium text-green-900 hover:text-green-700">
+              <Link href="/about-us" className="text-sm font-medium text-green-900 hover:text-green-700">
                 About Us
               </Link>
-              <Link href="#" className="text-sm font-medium text-green-900 hover:text-green-700">
+              <Link href="/contact" className="text-sm font-medium text-green-900 hover:text-green-700">
                 Contact
               </Link>
               <div className="flex flex-col space-y-2 pt-2">
@@ -225,37 +225,68 @@ export default function Home() {
         <section className="relative overflow-hidden py-20 lg:py-32">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1745305402882-c48c759861a5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Sunrise over fields"
+              src="/wheat-bg.jpg"
+              alt="Wheat field background"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div
-              className="max-w-3xl space-y-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Revolutionizing Indian Agriculture
-              </h1>
-              <p className="text-lg md:text-xl text-white max-w-2xl">
-                Empowering farmers with technology for sustainable farming, higher yields, and better livelihoods.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-green-700 hover:bg-green-800 text-white px-8 py-6 text-lg">
-                  Explore Solutions
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-green-600 text-green-700 hover:bg-green-50 px-8 py-6 text-lg"
-                >
-                  Watch Demo
-                </Button>
-              </div>
-            </motion.div>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <motion.div
+                className="max-w-xl space-y-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-extrabold text-black leading-tight">
+                  Revolutionizing <br />
+                  <span className="text-emerald-800">Indian</span> <span className="inline-flex items-center">Agriculture <img src="/leaf-icon.png" alt="Leaf icon" className="w-8 h-8 ml-2" /></span>
+                </h1>
+                <p className="text-lg md:text-xl text-gray-600 max-w-2xl">
+                  Empowering farmers with technology for sustainable farming, higher yields, and better livelihoods.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-black shadow-lg hover:bg-gray-800 text-white px-8 py-6 text-lg rounded-full">
+                    Explore
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-lg rounded-full"
+                  >
+                    Watch Demo
+                  </Button>
+                </div>
+              </motion.div>
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <div className="p-6 grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl shadow-lg bg-gray-50 p-4 flex flex-col items-center justify-center text-center">
+                    <img src="/app-icon.png" alt="Mobile app" className="w-12 h-12 mb-2" />
+                    <p className="text-sm text-gray-600">Take Krishi Setu Everywhere</p>
+                  </div>
+                  <div className="rounded-2xl shadow-lg bg-gray-50 p-4 flex flex-col items-center justify-center text-center">
+                    <img src="\WhatsApp Image 2025-04-23 at 18.03.48_21eda6e5.jpg" alt="Soil testing" className="w-12 h-12 mb-2" />
+                    <p className="text-sm text-gray-600">Crop Selection</p>
+                  </div>
+                </div>
+                <div className="p-6 grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl shadow-lg bg-gray-50 p-4 flex flex-col items-center justify-center text-center">
+                    <img src="\WhatsApp Image 2025-04-23 at 18.03.49_85dc70c2.jpg" alt="Weather" className="w-12 h-12 mb-2" />
+                    <p className="text-sm text-gray-600">Climate Tips</p>
+                  </div>
+                  <div className="shadow-lg bg-gray-50 p-4 rounded-2xl flex flex-col items-center justify-center text-center">
+                    <img src="/" alt="Marketplace" className="w-12 h-12 mb-2" />
+                    <p className="text-sm text-gray-600">Online Mandi</p>
+                  </div>
+                </div>
+                
+              </motion.div>
+            </div>
           </div>
         </section>
 

@@ -98,55 +98,6 @@ export default function Dashboard() {
     ],
   }
 
-  const soilData = {
-    ph: 6.8,
-    nitrogen: 75,
-    phosphorus: 60,
-    potassium: 80,
-    organicMatter: 3.2,
-    moisture: 45,
-    recommendations: [
-      "Add phosphorus-rich fertilizer to improve soil health",
-      "Consider adding organic compost to increase organic matter",
-      "Soil pH is optimal for most crops",
-    ],
-  }
-
-  const cropRecommendations = [
-    {
-      name: "Wheat",
-      suitability: 95,
-      season: "Rabi",
-      waterRequirement: "Medium",
-      expectedYield: "4.5-5.2 tonnes/hectare",
-      image: "https://plus.unsplash.com/premium_photo-1670909649532-d1d68ee475cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2hlYXR8ZW58MHx8MHx8fDA%3D",
-    },
-    {
-      name: "Rice",
-      suitability: 90,
-      season: "Kharif",
-      waterRequirement: "High",
-      expectedYield: "5.0-6.0 tonnes/hectare",
-      image: "https://images.unsplash.com/photo-1516684732162-798a0062be99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmljZXxlbnwwfHwwfHx8MA%3D%3D",
-    },
-    {
-      name: "Maize",
-      suitability: 85,
-      season: "Kharif",
-      waterRequirement: "Medium",
-      expectedYield: "3.5-4.2 tonnes/hectare",
-      image: "https://images.unsplash.com/photo-1651667343153-6dc318e27e41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFpemV8ZW58MHx8MHx8fDA%3D",
-    },
-    {
-      name: "Mustard",
-      suitability: 80,
-      season: "Rabi",
-      waterRequirement: "Low",
-      expectedYield: "1.2-1.5 tonnes/hectare",
-      image: "https://images.unsplash.com/photo-1651667343153-6dc318e27e41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFpemV8ZW58MHx8MHx8fDA%3D",
-    },
-  ]
-
   const upcomingTasks = [
     {
       task: "Apply fertilizer to wheat field",
@@ -207,7 +158,7 @@ export default function Dashboard() {
 
   return (
     <>
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-amber-50">
+    <div className="min-h-screen bg-gradient-to-b from-emerald-800 to-emerald-800">
       {/* Navigation Bar */}
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm px-8">
         <div className="container flex h-16 items-center justify-between">
@@ -312,13 +263,13 @@ export default function Dashboard() {
       {/* Dashboard Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-green-900">Farm Dashboard</h1>
-              <p className="text-green-700">Welcome back, {userData.name}! Here's your farm overview.</p>
+              <h1 className="text-2xl md:text-3xl font-bold text-white">Farm Dashboard</h1>
+              <p className="text-white">Welcome back, {userData.name}! Here's your farm overview.</p>
             </div>
-            <div className="mt-4 md:mt-0 flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-green-700" />
+            <div className="mt-4 md:mt-0 flex items-center">
+              <MapPin className="h-5 w-5 text-white" />
               <span className="text-green-800">{userData.location}</span>
-              <Badge variant="outline" className="ml-2 bg-green-100 text-green-800 hover:bg-green-200">
+              <Badge variant="outline" className="ml-2 bg-white text-emerald-800 hover:bg-emerald-400">
                 Last updated: Today, 10:30 AM
               </Badge>
             </div>
@@ -334,7 +285,7 @@ export default function Dashboard() {
           <motion.div variants={item} className="md:col-span-1">
             <Card className="h-full border-green-100">
               <CardHeader className="pb-2">
-                <CardTitle className="text-green-800 flex items-center justify-between">
+                <CardTitle className="text-emerald-800 flex items-center justify-between">
                   <span>Today's Weather</span>
                   <CloudSun className="h-5 w-5 text-amber-500" />
                 </CardTitle>
@@ -343,36 +294,36 @@ export default function Dashboard() {
               <CardContent>
                 <div className="flex justify-between items-center mb-6">
                   <div className="flex items-center">
-                    <div className="text-4xl font-bold text-green-900">{weatherData.current.temp}°C</div>
+                    <div className="text-4xl font-bold text-emerald-900">{weatherData.current.temp}°C</div>
                     <div className="ml-4 text-green-700">{weatherData.current.condition}</div>
                   </div>
                   <CloudSun className="h-12 w-12 text-amber-500" />
                 </div>
                 <div className="grid grid-cols-3 gap-2 mb-6">
-                  <div className="flex flex-col items-center p-2 bg-green-50 rounded-lg">
+                  <div className="flex flex-col items-center p-2 bg-emerald-800 rounded-lg">
                     <Droplets className="h-5 w-5 text-blue-500 mb-1" />
-                    <div className="text-xs text-green-700">Humidity</div>
-                    <div className="font-medium text-green-900">{weatherData.current.humidity}%</div>
+                    <div className="text-xs text-white">Humidity</div>
+                    <div className="font-medium text-white">{weatherData.current.humidity}%</div>
                   </div>
-                  <div className="flex flex-col items-center p-2 bg-green-50 rounded-lg">
+                  <div className="flex flex-col items-center p-2 bg-emerald-800 rounded-lg">
                     <Wind className="h-5 w-5 text-blue-500 mb-1" />
-                    <div className="text-xs text-green-700">Wind</div>
-                    <div className="font-medium text-green-900">{weatherData.current.windSpeed} km/h</div>
+                    <div className="text-xs text-white">Wind</div>
+                    <div className="font-medium text-white">{weatherData.current.windSpeed} km/h</div>
                   </div>
-                  <div className="flex flex-col items-center p-2 bg-green-50 rounded-lg">
+                  <div className="flex flex-col items-center p-2 bg-emerald-800 rounded-lg">
                     <CloudRain className="h-5 w-5 text-blue-500 mb-1" />
-                    <div className="text-xs text-green-700">Rain</div>
-                    <div className="font-medium text-green-900">{weatherData.current.precipitation}%</div>
+                    <div className="text-xs text-white">Rain</div>
+                    <div className="font-medium text-white">{weatherData.current.precipitation}%</div>
                   </div>
                 </div>
                 <div className="border-t border-green-100 pt-4">
-                  <div className="text-sm font-medium text-green-800 mb-2">5-Day Forecast</div>
+                  <div className="text-sm font-medium text-emerald-800 mb-2">5-Day Forecast</div>
                   <div className="flex justify-between">
                     {weatherData.forecast.map((day, index) => (
                       <div key={index} className="flex flex-col items-center">
-                        <div className="text-xs text-green-700">{day.day}</div>
+                        <div className="text-xs text-emerald-700">{day.day}</div>
                         {renderWeatherIcon(day.icon)}
-                        <div className="text-sm font-medium text-green-900">{day.temp}°</div>
+                        <div className="text-sm font-medium text-emerald-900">{day.temp}°</div>
                       </div>
                     ))}
                   </div>
@@ -385,7 +336,7 @@ export default function Dashboard() {
           <motion.div variants={item} className="md:col-span-2">
             <Card className="h-full border-green-100">
               <CardHeader className="pb-2">
-                <CardTitle className="text-green-800 flex items-center justify-between">
+                <CardTitle className="text-emerald-800 flex text-lg items-center justify-between">
                   <span>Land Details</span>
                   <MapPin className="h-5 w-5 text-green-700" />
                 </CardTitle>
@@ -396,28 +347,28 @@ export default function Dashboard() {
                   <div>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-1">
-                        <div className="text-sm text-green-700">Land Size</div>
-                        <div className="text-lg font-medium text-green-900">{userData.landSize}</div>
+                        <div className="text-sm text-emerald-800">Land Size</div>
+                        <div className="text-lg font-medium text-emerald-900">{userData.landSize}</div>
                       </div>
                       <div className="space-y-1">
-                        <div className="text-sm text-green-700">Land Type</div>
-                        <div className="text-lg font-medium text-green-900">{userData.landType}</div>
+                        <div className="text-sm text-emerald-800">Land Type</div>
+                        <div className="text-lg font-medium text-emerald-900">{userData.landType}</div>
                       </div>
                       <div className="space-y-1">
-                        <div className="text-sm text-green-700">Soil Type</div>
-                        <div className="text-lg font-medium text-green-900">{userData.soilType}</div>
+                        <div className="text-sm text-emerald-800">Soil Type</div>
+                        <div className="text-lg font-medium text-emerald-900">{userData.soilType}</div>
                       </div>
                       <div className="space-y-1">
-                        <div className="text-sm text-green-700">Last Soil Test</div>
-                        <div className="text-lg font-medium text-green-900">{userData.lastSoilTest}</div>
+                        <div className="text-sm text-emerald-800">Last Soil Test</div>
+                        <div className="text-lg font-medium text-emerald-900">{userData.lastSoilTest}</div>
                       </div>
                     </div>
                     <div className="mt-6">
-                      <div className="text-sm font-medium text-green-800 mb-2">Current Crops</div>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge className="bg-amber-100 text-amber-800 hover:bg-amber-200">Wheat (3.2 ha)</Badge>
-                        <Badge className="bg-green-100 text-green-800 hover:bg-green-200">Mustard (1.5 ha)</Badge>
-                        <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200">Vegetables (0.5 ha)</Badge>
+                      <div className="text-lg font-medium text-green-800 mb-2">Current Crops</div>
+                      <div className="flex flex-wrap gap-2 text-md">
+                        <Badge className="bg-amber-800 text-white hover:bg-amber-200">Wheat</Badge>
+                        <Badge className="bg-green-800 text-white hover:bg-green-200">Mustard</Badge>
+                        <Badge className="bg-blue-800 text-white hover:bg-blue-200">Vegetables</Badge>
                       </div>
                     </div>
                   </div>
@@ -434,152 +385,6 @@ export default function Dashboard() {
             </Card>
           </motion.div>
 
-          {/* Soil Information */}
-          <motion.div variants={item} className="md:col-span-2">
-            <Card className="h-full border-green-100">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-green-800 flex items-center justify-between">
-                  <span>Soil Information</span>
-                  <Droplets className="h-5 w-5 text-green-700" />
-                </CardTitle>
-                <CardDescription>Based on your last soil test on {userData.lastSoilTest}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <div className="text-sm text-green-700">pH Level</div>
-                      <div className="text-sm font-medium text-green-900">{soilData.ph}</div>
-                    </div>
-                    <Progress value={soilData.ph * 10} className="h-2" />
-                    <div className="flex justify-between text-xs text-green-600">
-                      <span>Acidic</span>
-                      <span>Neutral</span>
-                      <span>Alkaline</span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <div className="text-sm text-green-700">Nitrogen (N)</div>
-                      <div className="text-sm font-medium text-green-900">{soilData.nitrogen}%</div>
-                    </div>
-                    <Progress value={soilData.nitrogen} className="h-2" />
-                    <div className="flex justify-between text-xs text-green-600">
-                      <span>Low</span>
-                      <span>Medium</span>
-                      <span>High</span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <div className="text-sm text-green-700">Phosphorus (P)</div>
-                      <div className="text-sm font-medium text-green-900">{soilData.phosphorus}%</div>
-                    </div>
-                    <Progress value={soilData.phosphorus} className="h-2" />
-                    <div className="flex justify-between text-xs text-green-600">
-                      <span>Low</span>
-                      <span>Medium</span>
-                      <span>High</span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <div className="text-sm text-green-700">Potassium (K)</div>
-                      <div className="text-sm font-medium text-green-900">{soilData.potassium}%</div>
-                    </div>
-                    <Progress value={soilData.potassium} className="h-2" />
-                    <div className="flex justify-between text-xs text-green-600">
-                      <span>Low</span>
-                      <span>Medium</span>
-                      <span>High</span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <div className="text-sm text-green-700">Organic Matter</div>
-                      <div className="text-sm font-medium text-green-900">{soilData.organicMatter}%</div>
-                    </div>
-                    <Progress value={soilData.organicMatter * 20} className="h-2" />
-                    <div className="flex justify-between text-xs text-green-600">
-                      <span>Low</span>
-                      <span>Medium</span>
-                      <span>High</span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <div className="text-sm text-green-700">Moisture</div>
-                      <div className="text-sm font-medium text-green-900">{soilData.moisture}%</div>
-                    </div>
-                    <Progress value={soilData.moisture} className="h-2" />
-                    <div className="flex justify-between text-xs text-green-600">
-                      <span>Dry</span>
-                      <span>Moist</span>
-                      <span>Wet</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <div className="text-sm font-medium text-green-800 mb-2">Soil Recommendations</div>
-                  <ul className="space-y-2">
-                    {soilData.recommendations.map((rec, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mr-2 mt-0.5">
-                          <span className="text-green-600 text-xs">✓</span>
-                        </div>
-                        <span className="text-sm text-green-700">{rec}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button variant="outline" className="w-full border-green-600 text-green-700 hover:bg-green-50">
-                  <Link to="/soil-testing">Schedule New Soil Test</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          </motion.div>
-
-          {/* Crop Recommendations */}
-          <motion.div variants={item} className="md:col-span-1">
-            <Card className="h-full border-green-100">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-green-800 flex items-center justify-between">
-                  <span>Crop Recommendations</span>
-                  <Leaf className="h-5 w-5 text-green-700" />
-                </CardTitle>
-                <CardDescription>Based on your soil and location</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {cropRecommendations.slice(0, 3).map((crop, index) => (
-                    <div key={index} className="flex items-center gap-3 p-2 rounded-lg hover:bg-green-50">
-                      <img
-                        src={crop.image || "/placeholder.svg"}
-                        alt={crop.name}
-                        width={50}
-                        height={50}
-                        className="rounded-md object-cover"
-                      />
-                      <div className="flex-1">
-                        <div className="flex justify-between">
-                          <div className="font-medium text-green-900">{crop.name}</div>
-                          <Badge className="bg-green-100 text-green-800">{crop.season}</Badge>
-                        </div>
-                        <div className="text-xs text-green-700 mt-1">Suitability: {crop.suitability}%</div>
-                        <Progress value={crop.suitability} className="h-1 mt-1" />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full bg-green-700 hover:bg-green-800">View All Recommendations</Button>
-              </CardFooter>
-            </Card>
-          </motion.div>
-
           {/* Financial Overview */}
           <motion.div variants={item} className="md:col-span-2">
             <Card className="h-full border-green-100">
@@ -592,19 +397,19 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div className="bg-green-800 p-4 rounded-lg">
+                  <div className="bg-emerald-800 p-4 rounded-lg">
                     <div className="text-sm text-white mb-1">Income</div>
                     <div className="text-2xl font-bold text-white">
                       ₹{financialData.currentMonth.income.toLocaleString()}
                     </div>
                   </div>
-                  <div className="bg-red-800 p-4 rounded-lg">
+                  <div className="bg-red-900 p-4 rounded-lg">
                     <div className="text-sm text-white mb-1">Expenses</div>
                     <div className="text-2xl font-bold text-white">
                       ₹{financialData.currentMonth.expenses.toLocaleString()}
                     </div>
                   </div>
-                  <div className="bg-blue-800 p-4 rounded-lg">
+                  <div className="bg-blue-900 p-4 rounded-lg">
                     <div className="text-sm text-white mb-1">Profit</div>
                     <div className="text-2xl font-bold text-white">
                       ₹{financialData.currentMonth.profit.toLocaleString()}
@@ -730,7 +535,7 @@ export default function Dashboard() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full border-green-600 text-green-700 hover:bg-green-50">
+                <Button variant="outline" className="w-full bg-emerald-800 text-white hover:bg-emerald-50">
                   View Calendar
                 </Button>
               </CardFooter>
@@ -739,7 +544,7 @@ export default function Dashboard() {
 
           {/* Market Prices */}
           <motion.div variants={item} className="md:col-span-1">
-            <Card className="h-full border-green-100">
+            <Card className="h-full border-emerald-100">
               <CardHeader className="pb-2">
                 <CardTitle className="text-green-800 flex items-center justify-between">
                   <span>Market Prices</span>
@@ -763,7 +568,7 @@ export default function Dashboard() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-green-700 hover:bg-green-800"><Link to="/online-mandi">Visit Online Mandi</Link></Button>
+                <Button className="w-full bg-emerald-800 hover:bg-emerald-50"><Link to="/online-mandi">Visit Online Mandi</Link></Button>
               </CardFooter>
             </Card>
           </motion.div>
@@ -771,7 +576,7 @@ export default function Dashboard() {
           {/* Weather Advisory */}
           <motion.div variants={item} className="md:col-span-1">
             <Card className="h-full border-green-100">
-              <CardHeader className="pb-2 bg-amber-50 rounded-t-lg">
+              <CardHeader className="pb-2  rounded-t-lg">
                 <CardTitle className="text-amber-800 flex items-center justify-between">
                   <span>Weather Advisory</span>
                   <CloudSun className="h-5 w-5 text-amber-600" />
@@ -805,7 +610,7 @@ export default function Dashboard() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full border-amber-600 text-amber-700 hover:bg-amber-50">
+                <Button variant="outline" className="w-full bg-amber-900 text-white hover:bg-amber-50">
                   View Detailed Forecast
                 </Button>
               </CardFooter>
