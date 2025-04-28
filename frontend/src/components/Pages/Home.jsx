@@ -550,53 +550,37 @@ export default function Home() {
           {/* Decorative wheat image on the right */}
           <img src="wheat.png" alt="Wheat" className="hidden md:block absolute right-0 top-0 h-full w-auto z-0 pointer-events-none select-none" />
           <div className="relative z-10 max-w-7xl mx-auto px-4">
-            <div className="mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-[Montserrat]">Farmer Stories</h2>
-              <p className="text-lg text-[#e6f3de] max-w-xl font-[calibri]">Hear from farmers who have transformed their agricultural practices with KrishiSetu</p>
+            <div className="mb-18">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">Contributor</h2>
+              <p className="text-lg text-[#e6f3de] max-w-xl font-[calibri]">We as a created this wonderfull application for all farmers to increase their profit by using modern software technologies!</p>
             </div>
             <div className="flex flex-col md:flex-row gap-8 justify-center items-end mt-12">
               {/* Testimonial 1 */}
               <div className="relative bg-white rounded-[2rem] shadow-xl flex flex-col items-center px-8 pt-16 pb-8 w-full md:w-96 max-w-sm mx-auto">
                 <div className="absolute -top-14 left-1/2 -translate-x-1/2">
-                  <img src="https://images.unsplash.com/photo-1631819539802-720166c2651f?w=200&q=80" alt="Rajesh Kumar" className="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover" />
+                  <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFufGVufDB8fDB8fHww" alt="Utkarsh Tripathi" className="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mt-2 font-[calibri]">Rajesh Kumar</h3>
-                <div className="flex items-center justify-center mt-2 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-orange-500 text-xl">★</span>
-                  ))}
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mt-2 font-[calibri]">Utkarsh Tripathi</h3>
                 <hr className="w-2/3 my-4 border-gray-200" />
-                <p className="text-gray-700 text-base text-center font-[calibri]">"KrishiSetu helped me increase my crop yield by 30% through their soil testing and crop recommendations."</p>
+                <p className="text-gray-700 text-base text-center font-[calibri]">Full Stack Developer</p>
               </div>
               {/* Testimonial 2 */}
               <div className="relative bg-white rounded-[2rem] shadow-xl flex flex-col items-center px-8 pt-16 pb-8 w-full md:w-96 max-w-sm mx-auto">
                 <div className="absolute -top-14 left-1/2 -translate-x-1/2">
-                  <img src="https://images.unsplash.com/photo-1602793778401-d5ddab8febd5?w=200&q=80" alt="Ankita Devi" className="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover" />
+                  <img src="https://images.unsplash.com/photo-1581093058968-2246ee6e6761?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmVtYWxlJTIwY29kZXJ8ZW58MHx8MHx8fDA%3D" alt="Ananya Singh" className="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mt-2 font-[calibri]">Ankita Devi</h3>
-                <div className="flex items-center justify-center mt-2 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-orange-500 text-xl">★</span>
-                  ))}
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mt-2 font-[calibri]">Ananya Singh</h3>
                 <hr className="w-2/3 my-4 border-gray-200" />
-                <p className="text-gray-700 text-base text-center font-[calibri]">"The weather alerts saved my harvest during unexpected rains. This app is a blessing for small farmers like me."</p>
+                <p className="text-gray-700 text-base text-center font-[calibri]">Frontend Support</p>
               </div>
               {/* Testimonial 3 */}
               <div className="relative bg-white rounded-[2rem] shadow-xl flex flex-col items-center px-8 pt-16 pb-8 w-full md:w-96 max-w-sm mx-auto">
                 <div className="absolute -top-14 left-1/2 -translate-x-1/2">
-                  <img src="https://images.unsplash.com/photo-1642151054985-609d594ba1f7?w=200&q=80" alt="Suresh Patel" className="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover" />
+                  <img src="https://images.unsplash.com/photo-1588585994994-c6370cd1db0d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2lraCUyMGNvZGVyfGVufDB8fDB8fHww" alt="Harjass Singh" className="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mt-2 font-[calibri]">Suresh Patel</h3>
-                <div className="flex items-center justify-center mt-2 mb-2">
-                  {[...Array(4)].map((_, i) => (
-                    <span key={i} className="text-orange-500 text-xl">★</span>
-                  ))}
-                  <span className="text-gray-400 text-xl">★</span>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mt-2 font-[calibri]">Harjass Singh</h3>
                 <hr className="w-2/3 my-4 border-gray-200" />
-                <p className="text-gray-700 text-base text-center font-[calibri]">"I sold my crop residue through KrishiSetu instead of burning it. Better for the environment and I made extra income!"</p>
+                <p className="text-gray-700 text-base text-center font-[calibri]">UI Expert</p>
               </div>
             </div>
           </div>
